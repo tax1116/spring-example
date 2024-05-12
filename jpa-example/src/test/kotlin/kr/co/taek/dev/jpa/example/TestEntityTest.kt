@@ -13,16 +13,16 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 @ExtendWith(SpringExtension::class)
 @DataJpaTest
 class TestEntityTest {
-
     @Autowired
     private lateinit var testEntityRepository: TestEntityRepository
 
     @Test
     fun saveTest() {
         // given
-        val testEntity = TestEntity(
-            dto = TestDto("test")
-        )
+        val testEntity =
+            TestEntity(
+                dto = TestDto("test"),
+            )
 
         // when
         testEntityRepository.save(testEntity)

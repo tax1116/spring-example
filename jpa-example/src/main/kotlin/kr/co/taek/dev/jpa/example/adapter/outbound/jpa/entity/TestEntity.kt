@@ -11,7 +11,6 @@ import org.hibernate.type.SqlTypes
 class TestEntity(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
-
     @JdbcTypeCode(SqlTypes.JSON)
     val dto: TestDto = TestDto(),
 )
